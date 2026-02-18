@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+*.egg-info/
+
+# Data files (often too large for git)
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.vcf
+*.bcf
+*.bed
+*.bigwig
+*.bw
+
+# Jupyter
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+*.Rproj.user/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+work/        # Nextflow work directory
+.nextflow/
+.nextflow.log*
+
+# GWAS / PLINK
+*.bed
+*.bim
+*.fam
+*.ped
+*.map
+*.raw
+*.assoc
+*.assoc.linear
+*.assoc.logistic
+*.qassoc
+*.log
+*.nosex
+*.hh
+*.frq
+*.frqx
+*.lmiss
+*.imiss
+*.het
+*.ibc
+*.genome
+*.kin
+*.kin0
+*.eigenvec
+*.eigenval
+*.prune.in
+*.prune.out
+*.clumped
+*.ranges
+*.irem
+*.eval
+*.evec
+*.par
+*.rel
+*rel.id
+
+# GCTA / BOLT-LMM output
+*.grm.bin
+*.grm.N.bin
+*.grm.id
+*.mlma
+*.loco.mlma
+
+# Imputation
+*.dose.vcf.gz
+*.info
