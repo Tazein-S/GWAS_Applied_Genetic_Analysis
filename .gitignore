@@ -1,3 +1,10 @@
+*.txt
+*.pdf
+*.glm.logistic.hybrid
+*.pgen
+*.psam
+*.pvar
+
 # Python
 __pycache__/
 *.pyc
