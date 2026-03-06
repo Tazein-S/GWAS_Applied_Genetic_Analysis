@@ -1,0 +1,55 @@
+# Meta-analysis weighted by inverse variance
+SCHEME   STDERR
+
+# Apply genomic control correction for each study
+GENOMICCONTROL ON
+
+# Track allele frequencies
+AVERAGEFREQ ON
+MINMAXFREQ ON
+
+# Test for heterogeneity
+HETEROGENEITY ON
+
+#Uganda Study
+MARKER   snpid
+ALLELE   CODED NONCODED
+FREQ     af_uganda
+WEIGHT   no_uganda
+EFFECT   beta_uganda
+STDERR   se_uganda
+PVAL     pval_uganda
+PROCESS /projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz
+
+#DCC Study
+MARKER   snpid
+ALLELE   CODED NONCODED
+FREQ     af_DCC
+WEIGHT   no_DCC
+EFFECT   beta_DCC
+STDERR   se_DCC
+PVAL     pval_DCC
+PROCESS /projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz
+
+#DDS Study
+MARKER   snpid
+ALLELE   CODED NONCODED
+FREQ     af_DDS
+WEIGHT   no_DDS
+EFFECT   beta_DDS
+STDERR   se_DDS
+PVAL     pval_DDS
+PROCESS /projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz
+
+#AADM Study
+MARKER   snpid
+ALLELE   CODED NONCODED
+FREQ     af_AADM
+WEIGHT   no_AADM
+EFFECT   beta_AADM
+STDERR   se_AADM
+PVAL     pval_AADM
+PROCESS /projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz
+
+OUTFILE ZscoreMeta.tbl
+ANALYZE HETEROGENEITY

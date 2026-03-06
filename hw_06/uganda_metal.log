@@ -1,0 +1,183 @@
+MetaAnalysis Helper - (c) 2007 - 2009 Goncalo Abecasis
+This version released on 2020-05-05
+
+# This program faciliates meta-analysis of genome-wide association studies.
+# Commonly used commands are listed below:
+#
+# Options for describing input files ...
+#   SEPARATOR        [WHITESPACE|COMMA|BOTH|TAB] (default = WHITESPACE)
+#   COLUMNCOUNTING   [STRICT|LENIENT]            (default = 'STRICT')
+#   MARKERLABEL      [LABEL]                     (default = 'MARKER')
+#   ALLELELABELS     [LABEL1 LABEL2]             (default = 'ALLELE1','ALLELE2')
+#   EFFECTLABEL      [LABEL|log(LABEL)]          (default = 'EFFECT')
+#   FLIP
+#
+# Options for filtering input files ...
+#   ADDFILTER        [LABEL CONDITION VALUE]     (example = ADDFILTER N > 10)
+#                    (available conditions are <, >, <=, >=, =, !=, IN)
+#   REMOVEFILTERS
+#
+# Options for sample size weighted meta-analysis ...
+#   WEIGHTLABEL      [LABEL]                     (default = 'N')
+#   PVALUELABEL      [LABEL]                     (default = 'PVALUE')
+#   DEFAULTWEIGHT    [NUMBER]                    (default = 1.0)
+#   MINWEIGHT        [NUMBER]                    (default = 1.0)
+#
+# Options for inverse variance weighted meta-analysis ...
+#   STDERRLABEL      [LABEL]                     (default = 'STDERR')
+#   SCHEME           [SAMPLESIZE|STDERR]         (default = SAMPLESIZE)
+#
+# Options to enable tracking of allele frequencies ...
+#   AVERAGEFREQ      [ON|OFF]                    (default = OFF)
+#   MINMAXFREQ       [ON|OFF]                    (default = OFF)
+#   FREQLABEL        [LABEL]                     (default = 'FREQ')
+#
+# Options to enable tracking of user defined variables ...
+#   CUSTOMVARIABLE   [VARNAME]
+#   LABEL            [VARNAME] AS [HEADER]
+#
+# Options to enable tracking of chromosomes and positions ...
+#   TRACKPOSITIONS   [ON|OFF]                    (default = OFF
+#   CHROMOSOMELABEL  [LABEL]                     (default = 'CHROMOSOME')
+#   POSITIONLABEL    [LABEL]                     (default = 'POSITION')
+#
+# Options to enable explicit strand information ...
+#   USESTRAND        [ON|OFF]                    (default = OFF)
+#   STRANDLABEL      [LABEL]                     (default = 'STRAND')
+#
+# Automatic genomic control correction of input statistics ...
+#   GENOMICCONTROL   [ON|OFF|VALUE|LIST snps.txt](default = OFF)
+#
+# Options to account for samples overlap ...
+#   OVERLAP          [ON|OFF]                    (default = OFF)
+#   ZCUTOFF          [NUMBER]                    (default = 1.0)
+#
+# Options for general analysis control ...
+#   PROCESSFILE            [FILENAME]
+#   OUTFILE                [PREFIX SUFFIX]       (default = 'METAANALYSIS','.TBL')
+#   MAXWARNINGS            [NUMBER]              (default = 20)
+#   VERBOSE                [ON|OFF]              (default = 'OFF')
+#   LOGPVALUE              [ON|OFF]              (default = 'OFF')
+#   EFFECT_PRINT_PRECISION [NUMBER]              (default = '4')
+#   STDERR_PRINT_PRECISION [NUMBER]              (default = '4')
+#   ANALYZE                [HETEROGENEITY]
+#   CLEAR
+
+# Options for general run control ...
+#   SOURCE           [SCRIPTFILE]
+#   RETURN
+#   QUIT
+
+# Processing commands in metal.txt ...
+## Meta-analysis will be based on effect sizes and their standard errors ...
+## Genomic control correction of input statistics enabled
+## Averaging of allele frequencies enabled
+## Tracking of extreme allele frequencies enabled
+## ERROR: The command you issued could not be processed ...
+## Set marker header to snpid ...
+## Set allele headers to CODED and NONCODED ...
+## Set frequency header to af_uganda ...
+## Set weight header to no_uganda ...
+## Set effect header to beta_uganda ...
+## Set standard error header to se_uganda ...
+## Set p-value header to pval_uganda ...
+###########################################################################
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## Genomic control parameter is 1.021, adjusting test statistics
+## Processed 13727361 markers ...
+
+## Set marker header to snpid ...
+## Set allele headers to CODED and NONCODED ...
+## Set frequency header to af_DCC ...
+## Set weight header to no_DCC ...
+## Set effect header to beta_DCC ...
+## Set standard error header to se_DCC ...
+## Set p-value header to pval_DCC ...
+###########################################################################
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## WARNING: Invalid standard error for marker 10:100003534:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100032887:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100035558:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100066894:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100066945:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100075463:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100091769:T:C, ignored
+## WARNING: Invalid standard error for marker 10:100093258:T:C, ignored
+## WARNING: Invalid standard error for marker 10:100096671:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100101115:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100102258:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100102769:T:A, ignored
+## WARNING: Invalid standard error for marker 10:100107117:G:A, ignored
+## WARNING: Invalid standard error for marker 10:10012132:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100125156:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100129888:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100140080:T:C, ignored
+## WARNING: Invalid standard error for marker 10:100144774:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100148425:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100149456:G:A, ignored
+## WARNING: Invalid standard errors for 438604 other markers also ignored
+## Genomic control parameter is 1.006, adjusting test statistics
+## Processed 13288737 markers ...
+
+## Set marker header to snpid ...
+## Set allele headers to CODED and NONCODED ...
+## Set frequency header to af_DDS ...
+## Set weight header to no_DDS ...
+## Set effect header to beta_DDS ...
+## Set standard error header to se_DDS ...
+## Set p-value header to pval_DDS ...
+###########################################################################
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## WARNING: Invalid standard error for marker 10:100003534:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100035558:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100043802:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100066894:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100066945:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100075463:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100102258:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100107117:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100125156:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100129888:A:G, ignored
+## WARNING: Invalid standard error for marker 10:100140080:T:C, ignored
+## WARNING: Invalid standard error for marker 10:100144774:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100148425:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100149456:G:A, ignored
+## WARNING: Invalid standard error for marker 10:100152306:C:A, ignored
+## WARNING: Invalid standard error for marker 10:10015714:C:G, ignored
+## WARNING: Invalid standard error for marker 10:100157346:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100158708:C:T, ignored
+## WARNING: Invalid standard error for marker 10:1001589:C:T, ignored
+## WARNING: Invalid standard error for marker 10:100174664:G:GA, ignored
+## WARNING: Invalid standard errors for 430963 other markers also ignored
+## Genomic control parameter is 1.012, adjusting test statistics
+## Processed 13296378 markers ...
+
+## Set marker header to snpid ...
+## Set allele headers to CODED and NONCODED ...
+## Set frequency header to af_AADM ...
+## Set weight header to no_AADM ...
+## Set effect header to beta_AADM ...
+## Set standard error header to se_AADM ...
+## Set p-value header to pval_AADM ...
+###########################################################################
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## Genomic control parameter is 1.004, adjusting test statistics
+## Processed 13727361 markers ...
+
+## ERROR: The command you issued could not be processed ...
+###########################################################################
+## Running second pass analysis to evaluate heterogeneity...
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+## Processing file '/projectnb/bs859/data/bmi/uganda/Uganda_BMI_GWAS_MAF01.txt.gz'
+
+###########################################################################
+## Executing meta-analysis ...
+## Complete results will be stored in file 'METAANALYSIS1.TBL'
+## Column descriptions will be stored in file 'METAANALYSIS1.TBL.info'
+## Completed meta-analysis for 13727361 markers!
+## Smallest p-value is 8.393e-09 at marker '11:56591541:T:G'
+
+## Clearing all stored statistics ...
+# Clearing user defined filters ...

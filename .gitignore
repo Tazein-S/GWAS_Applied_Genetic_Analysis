@@ -90,3 +90,5 @@ work/        # Nextflow work directory
 # Imputation
 *.dose.vcf.gz
 *.info
+
+METAANALYSIS1.TBL
