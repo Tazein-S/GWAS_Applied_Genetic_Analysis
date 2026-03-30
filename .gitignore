@@ -4,6 +4,9 @@
 *.pgen
 *.psam
 *.pvar
+*.cojo
+*.badsnps
+*.sumstats.gz
 
 # Python
 __pycache__/
