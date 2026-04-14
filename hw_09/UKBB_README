@@ -1,0 +1,19 @@
+LD scores from UKBB, downloaded from https://pan.ukbb.broadinstitute.org/docs/ld
+
+
+Variants included:  high-quality HapMap 3 variants that are 1) in autosomes, 2) not in the MHC region, 3) biallelic SNPs, 4) with INFO > 0.9, and 5) MAF > 1% in UKB and gnomAD genome/exome (if available).
+
+Populations:
+EUR = European ancestry
+CSA = Central/South Asian ancestry
+AFR = African ancestry
+EAS = East Asian ancestry
+MID = Middle Eastern ancestry
+AMR = Admixed American ancestry
+
+SNP locations in these files are on Build 37 of the genome.
+
+Please see documentation on that site for details about these scores
+
+
+

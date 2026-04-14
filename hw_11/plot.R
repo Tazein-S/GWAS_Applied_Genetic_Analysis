@@ -1,0 +1,7 @@
+source("gsmr_plot.r")
+gsmr_data = read_gsmr_data("FG-T2D-gsmr.eff_plot.gz")
+gsmr_summary(gsmr_data)
+jpeg("FG-T2D-gsmr.jpeg",width=960,height=480)
+par(mfrow=c(1,1))
+plot_gsmr_effect(gsmr_data, "FG", "T2D", colors()[75])
+dev.off()
