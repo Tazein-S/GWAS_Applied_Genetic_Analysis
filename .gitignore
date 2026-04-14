@@ -95,3 +95,14 @@ work/        # Nextflow work directory
 *.info
 
 METAANALYSIS1.TBL
+hw_10/*.png
+hw_10/*.best
+hw_10/*.mismatch
+hw_10/*.prsice
+hw_10/*.valid
+hw_10/lib/
+
+hw_11/*.gsmr
+hw_11/*.pleio_snps
+hw_11/*.jpeg
+hw_11/*.gz
